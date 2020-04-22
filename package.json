@@ -16,6 +16,7 @@
     "@antv/l7-react": "^2.1.8",
     "antd": "^4.1.4",
     "bizcharts": "3.5.8",
+    "node-sass": "^4.13.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-router": "^5.1.2",
