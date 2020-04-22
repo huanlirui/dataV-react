@@ -12,7 +12,7 @@ class LargeIndex extends Component {
   constructor(props) {
     super(props);
   }
-
+ 
   render() {
     return (
       <div data-component="LargeIndex">
