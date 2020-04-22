@@ -14,6 +14,7 @@
     "@antv/l7": "^2.1.8",
     "@antv/l7-maps": "^2.1.8",
     "@antv/l7-react": "^2.1.8",
+    "@jiaminghi/data-view-react": "^1.1.7",
     "antd": "^4.1.4",
     "bizcharts": "3.5.8",
     "node-sass": "^4.13.1",

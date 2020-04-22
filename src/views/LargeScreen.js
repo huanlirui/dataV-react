@@ -1,23 +1,44 @@
-import React, { Component } from "react";
+import React, { Component, useState } from "react";
+import {
+  BorderBox1,
+  BorderBox11,
+  Loading,
+  FullScreenContainer,
+} from "@jiaminghi/data-view-react";
+import { Row, Col } from "antd";
+import Columnanimated from "../components/Columnanimated";
+import SignToMap from "../components/SignToMap";
+import LabelPie from "../components/LabelPie";
+function LargeScreen() {
+  const [loading, setLoading] = useState(false);
 
-import ScaleBox from "react-scale-box";
-class LargeScreen extends Component {
-  constructor(props) {
-    super(props);
-  }
+  return (
+    <div>
+      <button onClick={() => setLoading(!loading)}>Click me</button>
 
-  render() {
-    return (
-      //   <ScaleBox width={1920} height={1080}>
-      //     <div className={"screen"}>
-      //       <SignToMap />
-      //     </div>
-      //   </ScaleBox>
-      <div>
-        大屏设计
-      </div>
-    );
-  }
+      {loading ? (
+        <Loading>Loading...</Loading>
+      ) : (
+        <Row style={{ minHeight: 400 }}>
+          <Col span={6}>
+            <BorderBox1>
+              <Columnanimated />
+            </BorderBox1>
+          </Col>
+          <Col span={12}>
+            <BorderBox11 style={{ overFlow: "hidden" }} title="地图标记">
+              <SignToMap />
+            </BorderBox11>
+          </Col>
+          <Col span={6}>
+            <BorderBox1>
+              <LabelPie />
+            </BorderBox1>
+          </Col>
+        </Row>
+      )}
+    </div>
+  );
 }
 
 export default LargeScreen;

@@ -6,21 +6,22 @@ import Statistics from "./Statistics";
 import { HashRouter as Router, Link, Route } from "react-router-dom";
 import "antd/dist/antd.css";
 import "./css/LargeIndex";
+
 const { Header, Footer, Sider, Content } = Layout;
 
 class LargeIndex extends Component {
   constructor(props) {
     super(props);
   }
- 
+
   render() {
     return (
       <div data-component="LargeIndex">
         <Router>
           <Layout>
-            <Header style={{ position: "fixed", zIndex: 1, width: "100%" }}>
+            <Header style={{ position: "fixed", zIndex: 1000, width: "100%" }}>
               <div className="logo" />
-              <Menu theme="dark" mode="horizontal" >
+              <Menu theme="dark" mode="horizontal">
                 <Menu.Item key="1">
                   <Link to="/largeIndex/signToMap">地图标记</Link>
                 </Menu.Item>
@@ -33,9 +34,11 @@ class LargeIndex extends Component {
               </Menu>
             </Header>
             <Content>
-              <Route path="/largeIndex/signToMap" component={SignToMap} />
-              <Route path="/largeIndex/statistics" component={Statistics} />
-              <Route path="/largeIndex/largeScreen" component={LargeScreen} />
+          
+                <Route path="/largeIndex/signToMap" component={SignToMap} />
+                <Route path="/largeIndex/statistics" component={Statistics} />
+                <Route path="/largeIndex/largeScreen" component={LargeScreen} />
+           
             </Content>
             <Footer style={{ textAlign: "center" }}>
               Copyright 2020 云南格泰科技有限公司 出品

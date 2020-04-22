@@ -77,12 +77,12 @@ class LabelPie extends React.Component {
       return xy;
     }
     return (
-      <div>
+      <div style={{ marginLeft:'-70px' }}>
         <Chart
-          height={window.innerHeight}
+          height={window.innerHeight - 700}
           data={dv}
           scale={cols}
-          padding={[80, 100, 80, 80]}
+          // padding={[80, 100, 80, 80]}
           forceFit
           onGetG2Instance={(c) => {
             const xy = getXY(c, { index: 0 });
@@ -91,7 +91,7 @@ class LabelPie extends React.Component {
         >
           <Coord type="theta" radius={0.75} />
           <Axis name="percent" />
-          <Legend position="right" offsetY={-window.innerHeight / 2 + 200} />
+          <Legend position="left" offsetY={-window.innerHeight / 2 + 650} offsetX={-window.innerHeight / 2 + 700 }/>
           <Tooltip
             //triggerOn='none'
             showTitle={false}
