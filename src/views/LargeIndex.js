@@ -34,11 +34,11 @@ class LargeIndex extends Component {
               </Menu>
             </Header>
             <Content>
-          
+              <div style={{ backgroundColor: "#282c34" }}>
                 <Route path="/largeIndex/signToMap" component={SignToMap} />
                 <Route path="/largeIndex/statistics" component={Statistics} />
                 <Route path="/largeIndex/largeScreen" component={LargeScreen} />
-           
+              </div>
             </Content>
             <Footer style={{ textAlign: "center" }}>
               Copyright 2020 云南格泰科技有限公司 出品
